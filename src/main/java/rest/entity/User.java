@@ -1,5 +1,6 @@
 package rest.entity;
 
+import com.google.gson.Gson;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -27,5 +28,11 @@ public class User {
 
     public static User sample() {
         return new User("cjy", "test@aaa.co.kr");
+    }
+
+    public static void main(String[] args) {
+
+        User user = new User("cjy", "test@aaa.co.kr");
+        System.out.println(new Gson().toJson(user));
     }
 }
