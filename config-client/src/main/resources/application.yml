@@ -1,0 +1,19 @@
+# Config Client 정보
+server:
+  port: 8088
+
+#test:
+#  str: test-str
+
+spring:
+  application:
+    name: application-dev
+  config:
+    import: optional:configserver:http://localhost:9900
+#
+# Spring Cloud Actuator
+management:
+  endpoint:
+    web:
+      exposure:
+        include: refresh

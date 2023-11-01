@@ -1,2 +1,19 @@
-spring :
-  port : 80
+server:
+  port: 8088
+# 9900
+#test:
+#  str: test-str
+
+# Spring Cloud에 대한 Config Server정보
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/start108/spring-cloud-config.git
+
+spring:
+  application:
+    name: application-dev
+  config:
+    import: optional:configserver:http://localhost:9900
